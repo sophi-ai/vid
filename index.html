@@ -4,16 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- 🔴 META TAGS X Player Card (c’est ce qui fait apparaître la vidéo) -->
+  <!-- 🔴 META TAGS X Player Card -->
   <meta name="twitter:card" content="player" />
   <meta name="twitter:title" content="Sophia 🔥" />
   <meta name="twitter:description" content="Contenu exclusif • Lien vers mon profil complet" />
   <meta name="twitter:image" content="https://sophi-ai.github.io/vid/thumbnail.jpg" />
-
-  <!-- URL du player que X va charger -->
   <meta name="twitter:player" content="https://sophi-ai.github.io/vid/container.html" />
   <meta name="twitter:player:width" content="1280" />
   <meta name="twitter:player:height" content="720" />
+
+  <!-- 🟢 META TAGS Open Graph (pour supprimer les warnings) -->
+  <meta property="og:title" content="Sophia 🔥" />
+  <meta property="og:description" content="Contenu exclusif • Lien vers mon profil complet" />
+  <meta property="og:image" content="https://sophi-ai.github.io/vid/thumbnail.jpg" />
+  <meta property="og:url" content="https://sophi-ai.github.io/vid/" />
+  <meta property="og:type" content="website" />
 
   <title>Sophia - Preview Vidéo</title>
   <style>
@@ -43,7 +48,6 @@
   <script>
     let timeLeft = 3;
     const timerEl = document.getElementById('timer');
-    
     const countdown = setInterval(() => {
       timeLeft--;
       timerEl.textContent = timeLeft;
