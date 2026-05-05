@@ -4,24 +4,54 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- 🔴 META TAGS X / Twitter Player Card -->
+  <!-- 🔴 META TAGS X Player Card (c’est ce qui fait apparaître la vidéo) -->
   <meta name="twitter:card" content="player" />
-  <meta name="twitter:title" content="Tyumadison - Viens voir 🔥" />
-  <meta name="twitter:description" content="Link in bio complet • OnlyFans • Contenu exclusif" />
-  <meta name="twitter:image" content="https://tonusername.github.io/ton-repo/thumbnail.jpg" /> <!-- vignette optionnelle -->
-  
-  <!-- URL du player vidéo (le fichier ci-dessous) -->
-  <meta name="twitter:player" content="https://tonusername.github.io/ton-repo/container.html" />
+  <meta name="twitter:title" content="Sophia 🔥" />
+  <meta name="twitter:description" content="Contenu exclusif • Lien vers mon profil complet" />
+  <meta name="twitter:image" content="https://sophi-ai.github.io/vid/thumbnail.jpg" />
+
+  <!-- URL du player que X va charger -->
+  <meta name="twitter:player" content="https://sophi-ai.github.io/vid/container.html" />
   <meta name="twitter:player:width" content="1280" />
   <meta name="twitter:player:height" content="720" />
 
-  <!-- Redirection automatique vers ton GetMySocial -->
-  <meta http-equiv="refresh" content="0; url=https://getmysocial.com/tyumadison" />
-
-  <title>Tyumadison - GetMySocial</title>
+  <title>Sophia - Preview Vidéo</title>
+  <style>
+    body { margin:0; padding:0; background:#000; color:white; font-family:sans-serif; text-align:center; overflow:hidden; }
+    .container { max-width:1280px; margin:0 auto; padding:20px; }
+    video { width:100%; max-width:1280px; border-radius:12px; box-shadow:0 10px 30px rgba(255,0,255,0.3); }
+    h1 { margin:30px 0 10px; font-size:28px; }
+    p { font-size:18px; margin:15px 0; }
+    .btn { background:#ff00ff; color:white; padding:18px 50px; font-size:22px; border:none; border-radius:50px; cursor:pointer; margin:20px 0; display:inline-block; text-decoration:none; }
+    .countdown { font-size:22px; color:#ff00ff; margin-top:20px; }
+  </style>
 </head>
-<body style="margin:0; padding:0; background:#000; color:white; text-align:center; font-family:sans-serif;">
-  <h2 style="margin-top:40vh;">Redirection vers ton profil...</h2>
-  <p>Si ça ne charge pas, clique ici → <a href="https://getmysocial.com/tyumadison" style="color:#ff00ff;">getmysocial.com/tyumadison</a></p>
+<body>
+  <div class="container">
+    <h1>Hey ! Voici ma vidéo preview 🔥</h1>
+    
+    <video controls autoplay loop muted playsinline>
+      <source src="ma-video.mp4" type="video/mp4">
+    </video>
+
+    <p>Clique ci-dessous pour aller sur mon profil complet</p>
+    <a href="https://getmysocial.com/tyumadison" class="btn">➜ Aller sur mon GetMySocial</a>
+
+    <div class="countdown">Redirection automatique dans <span id="timer">3</span> secondes...</div>
+  </div>
+
+  <script>
+    let timeLeft = 3;
+    const timerEl = document.getElementById('timer');
+    
+    const countdown = setInterval(() => {
+      timeLeft--;
+      timerEl.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        window.location.href = "https://getmysocial.com/tyumadison";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
